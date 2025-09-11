@@ -1,0 +1,16 @@
+.display-content {
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  gap: 20px;
+  height: 100vh;
+  padding: 20px;
+}
+
+.filters-content {
+  border-right: 1px solid #ccc;
+  padding-right: 20px;
+}
+
+.tiers-filter {
+  margin-bottom: 20px;
+}

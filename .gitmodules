@@ -1,0 +1,7 @@
+[submodule "gameData/BitCraft_GameData"]
+	path = gameData/BitCraft_GameData
+	url = https://github.com/BitCraftToolBox/BitCraft_GameData
+	branch = cereal/cs
+[submodule "gameData/brico"]
+	path = gameData/brico
+	url = https://github.com/BitCraftToolBox/brico

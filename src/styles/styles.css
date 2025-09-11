@@ -5,12 +5,14 @@
   --toggle-color: #d3cab1;
   --toggle-highlight-color: #e9dfc4;
   --header-color: #15567e;
+  --list-bg-color: #ece3cb;
 }
 
 [data-theme="dark"] {
   --bg-color: #2b2e3b;
   --text-color: #d3cab1;
   --highlight-color: #221f2c;
+  --list-bg-color: #2b2e3b;
 }
 
 * {
@@ -23,6 +25,7 @@ body {
   background-color: var(--bg-color);
   color: var(--text-color);
   transition: background-color 0.4s ease, color 0.4s ease;
+  height: 100vh;
 }
 
 .app::before, .app::after {
