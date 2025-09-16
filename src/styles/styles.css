@@ -1,19 +1,5 @@
-:root {
-  --bg-color: #d3cab1;
-  --text-color: #15567e;
-  --highlight-color: #e9dfc4;
-  --toggle-color: #d3cab1;
-  --toggle-highlight-color: #e9dfc4;
-  --header-color: #15567e;
-  --list-bg-color: #ece3cb;
-}
-
-[data-theme="dark"] {
-  --bg-color: #2b2e3b;
-  --text-color: #d3cab1;
-  --highlight-color: #221f2c;
-  --list-bg-color: #2b2e3b;
-}
+@import './variables.css';
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100..700;1,100..700&display=swap');
 
 * {
   margin: 0;
@@ -22,10 +8,11 @@
 }
 
 body {
-  background-color: var(--bg-color);
-  color: var(--text-color);
+  background-color: var(--page-bg-color);
+  /* color: var(--text-color); */
   transition: background-color 0.4s ease, color 0.4s ease;
   height: 100vh;
+  font-family: 'Josefin Sans';
 }
 
 .app::before, .app::after {

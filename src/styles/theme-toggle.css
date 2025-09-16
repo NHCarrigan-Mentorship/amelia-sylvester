@@ -1,3 +1,5 @@
+@import './variables.css';
+
 .moon, .sun {
   transform: rotate(-45deg);
   transition: transform 0.3s ease-in-out;
@@ -11,13 +13,13 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  background-color: var(--toggle-color);
+  background-color: var(--theme-toggle-color);
   transform: rotate(45deg);
   transition: background-color 0.3s ease-in-out, transform 0.3s ease-in-out;
 }
 
 .theme-toggle:hover {
-  background-color: var(--toggle-highlight-color);
+  background-color: var(--theme-toggle-highlight-color);
   cursor: pointer;
   transform: rotate(-45deg);
 }
