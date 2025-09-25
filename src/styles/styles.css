@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 :root {
   --bg-color: #d3cab1;
   --text-color: #15567e;
@@ -14,6 +15,10 @@
   --highlight-color: #221f2c;
   --list-bg-color: #2b2e3b;
 }
+=======
+@import './variables.css';
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100..700;1,100..700&display=swap');
+>>>>>>> 9957548594752bbd614aea291f676a4906e3032b
 
 * {
   margin: 0;
@@ -22,10 +27,18 @@
 }
 
 body {
+<<<<<<< HEAD
   background-color: var(--bg-color);
   color: var(--text-color);
   transition: background-color 0.4s ease, color 0.4s ease;
   height: 100vh;
+=======
+  background-color: var(--page-bg-color);
+  /* color: var(--text-color); */
+  transition: background-color 0.4s ease, color 0.4s ease;
+  height: 100vh;
+  font-family: 'Josefin Sans';
+>>>>>>> 9957548594752bbd614aea291f676a4906e3032b
 }
 
 .app::before, .app::after {
