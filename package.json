@@ -6,6 +6,8 @@
   "scripts": {
     "dev": "vite",
     "build": "vite build",
+    "prebuild": "npm run generate-data",
+    "generate-data": "cd ./gameData && python crafting_data.py",
     "lint": "eslint .",
     "preview": "vite preview"
   },

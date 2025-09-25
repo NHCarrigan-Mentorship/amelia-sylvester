@@ -1,5 +1,7 @@
+@import './variables.css';
+
 header {
-  background-color: #15567e;
+  background-color: var(--header-color);
   height: 56px;
   display: flex;
   padding: 12px;
