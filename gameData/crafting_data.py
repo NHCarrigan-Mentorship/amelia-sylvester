@@ -391,6 +391,58 @@ for key, value in crafting_data.items():
 
 #################################
 
+# Copy icons into src/assets
+print('Copying icons into src/assets...')
+source_icons_dir = icon_root
+dest_icons_dir = '../src/assets/GeneratedIcons'
+
+##
+print(f"Source directory: {source_icons_dir}")
+print(f"Destination directory: {dest_icons_dir}")
+##
+
+##
+if not os.path.exists(source_icons_dir):
+  print(f'ERROR: Source directory DNE: {source_icons_dir}')
+  print('Current working directory:', os.getcwd())
+  print('Files in current directory:', os.listdir('.'))
+  if os.path.exists('../brico'):
+    print('Found brico in parent directory')
+    source_icons_dir = f'../{icon_root}'
+    print(f'Trying alternative path: {source_icons_dir}')
+##
+
+# Create dest directory if DNE
+os.makedirs(dest_icons_dir, exist_ok=True)
+
+##
+if not os.path.exists(source_icons_dir):
+  print(f'ERROR: Source directory still DNE: {source_icons_dir}')
+else:
+  print(f'Source directory found: {source_icons_dir}')
+
+  # Copy all icons from source to dest
+  copied_count = 0
+  for root, dirs, files in os.walk(source_icons_dir):
+    for file in files:
+      if file.endswith('.webp'):
+        source_path = os.path.join(root, file)
+
+        # Calculate relative path to maintain directory structure
+        relative_path = os.path.relpath(source_path, source_icons_dir)
+        dest_path = os.path.join(dest_icons_dir, relative_path)
+
+        # Create dest directory if DNE
+        os.makedirs(os.path.dirname(dest_path), exist_ok=True)
+
+        # Copy file
+        shutil.copy2(source_path, dest_path)
+        copied_count += 1
+
+  print(f'Copied {copied_count} icons to {dest_icons_dir}')
+
+#################################
+
 # Save crafting data
 output_path = '../src/data/crafting_data.json'
 print(f'Saving crafting data to {output_path}...')
