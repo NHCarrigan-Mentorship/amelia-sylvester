@@ -392,9 +392,9 @@ for key, value in crafting_data.items():
 #################################
 
 # Copy icons into src/assets
-print('Copying icons into src/assets...')
+print('Copying icons into public/assets...')
 source_icons_dir = icon_root
-dest_icons_dir = '../src/assets/GeneratedIcons'
+dest_icons_dir = '../public/assets/GeneratedIcons'
 
 ##
 print(f"Source directory: {source_icons_dir}")

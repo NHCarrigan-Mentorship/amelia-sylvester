@@ -17,7 +17,7 @@
     "init-submodules": "git submodule update --init --recursive",
     "pull-all": "git pull && npm run update-all",
 
-    "dev-with-update": "npm run update-all && npm run dev",
+    "dev-with-update": "npm run update-all && npm run prebuild && npm run dev",
     "build-with-update": "npm run update-all && npm run dev"
   },
   "dependencies": {

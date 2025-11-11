@@ -113,7 +113,7 @@ const ItemList = () => {
                 style={{ borderColor: `${RARITY_DISPLAY_COLORS[item.rarity]}`}}
               >
                 <img
-                  src={`/src/assets/${item.icon}.webp`}
+                  src={`/assets/${item.icon}.webp`}
                   alt={item.name}
                   className='item-icon'
                   // onError={(e) => {
